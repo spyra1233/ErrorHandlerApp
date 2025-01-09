@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Bug Tracker</h1>
+    @if (ViewBag.Username != null)
+    {
+        <p>You are logged in as <strong>@ViewBag.Username</strong> (@ViewBag.Role).</p>
+    }
+    else
+    {
+        <p>Please <a href="/Auth/Login">log in</a> to access all features.</p>
+    }
+    <a href="/Bug/Create" class="btn btn-primary">Report a New Bug</a>
+    <a href="/Bug/Index" class="btn btn-secondary">View All Bugs</a>
+</div>
